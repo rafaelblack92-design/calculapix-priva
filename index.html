@@ -1,83 +1,149 @@
-[20/08/2026 14:01] Rafael Sales: <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Política de Privacidade - Calcula Pix</title>
     <style>
+        :root {
+            --primary: #059669;
+            --primary-light: #10b981;
+            --primary-bg: #ecfdf5;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --bg-page: #f8fafc;
+            --card-bg: #ffffff;
+            --border-color: #e2e8f0;
+        }
+        * {
+            box-sizing: border-box;
+        }
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: #334155;
-            background-color: #f8fafc;
+            line-height: 1.65;
+            color: var(--text-main);
+            background-color: var(--bg-page);
             margin: 0;
-            padding: 0;
+            padding: 20px 15px;
         }
         .container {
-            max-width: 800px;
-            margin: 40px auto;
+            max-width: 820px;
+            margin: 30px auto;
             padding: 40px;
-            background-color: #ffffff;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+            background-color: var(--card-bg);
+            border-radius: 16px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.06), 0 2px 4px -2px rgba(0, 0, 0, 0.04);
+            border: 1px solid var(--border-color);
         }
         header {
             border-bottom: 2px solid #f1f5f9;
-            padding-bottom: 20px;
+            padding-bottom: 24px;
             margin-bottom: 30px;
+        }
+        .badge {
+            display: inline-block;
+            background-color: var(--primary-bg);
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 13px;
+            padding: 4px 12px;
+            border-radius: 9999px;
+            margin-bottom: 12px;
+            border: 1px solid #a7f3d0;
         }
         h1 {
             color: #0f172a;
-            font-size: 28px;
+            font-size: 30px;
             margin: 0 0 10px 0;
+            line-height: 1.25;
         }
         .date {
-            color: #64748b;
+            color: var(--text-muted);
             font-size: 14px;
         }
         h2 {
-            color: #1e293b;
+            color: #0f172a;
             font-size: 20px;
-            margin-top: 30px;
-            margin-bottom: 15px;
-            border-left: 4px solid #10b981;
-            padding-left: 10px;
+            margin-top: 36px;
+            margin-bottom: 14px;
+            border-left: 4px solid var(--primary-light);
+            padding-left: 12px;
         }
         p {
             margin: 0 0 16px 0;
             text-align: justify;
         }
         ul {
-            margin: 0 0 16px 0;
-            padding-left: 20px;
+            margin: 0 0 18px 0;
+            padding-left: 24px;
         }
         li {
             margin-bottom: 8px;
         }
         .highlight-box {
-            background-color: #f0fdf4;
+            background-color: var(--primary-bg);
             border: 1px solid #bbf7d0;
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 24px;
+            padding: 20px 24px;
+            border-radius: 12px;
+            margin: 24px 0;
         }
         .highlight-box p:last-child {
             margin-bottom: 0;
         }
+        .perm-box {
+            background-color: #f1f5f9;
+            border-radius: 8px;
+            padding: 12px 16px;
+            margin-bottom: 10px;
+            border-left: 3px solid var(--text-muted);
+        }
+        .perm-box code {
+            font-weight: bold;
+            color: #0f172a;
+        }
+        .btn-email {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: var(--primary);
+            color: #ffffff !important;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            margin-top: 8px;
+            text-decoration: none !important;
+            transition: background-color 0.2s;
+        }
+        .btn-email:hover {
+            background-color: #047857;
+        }
         footer {
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid #e2e8f0;
+            margin-top: 50px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border-color);
             text-align: center;
-            color: #94a3b8;
+            color: var(--text-muted);
             font-size: 14px;
         }
         a {
-            color: #10b981;
+            color: var(--primary);
             text-decoration: none;
+            font-weight: 500;
         }
         a:hover {
             text-decoration: underline;
+        }
+        @media (max-width: 640px) {
+            .container {
+                padding: 24px 18px;
+                margin: 10px auto;
+            }
+            h1 {
+                font-size: 24px;
+            }
+            p {
+                text-align: left;
+            }
         }
     </style>
 </head>
@@ -85,82 +151,124 @@
 
 <div class="container">
     <header>
+        <span class="badge">Privacidade e Transparência</span>
         <h1>Política de Privacidade</h1>
         <div class="date">Aplicativo: <strong>Calcula Pix</strong></div>
-        <div class="date">Última atualização: 20 de agosto de 2026</div>
+        <div class="date">Desenvolvedor: <strong>Rafael Sales Lins</strong></div>
+        <div class="date">Última atualização: 01 de setembro de 2026</div>
     </header>
 
     <section>
-        <p>Esta Política de Privacidade descreve de forma clara e transparente como o aplicativo <strong>Calcula Pix</strong>, desenvolvido por <strong>Rafael Sales Lins</strong>, lida com as suas informações. A sua privacidade é a nossa prioridade absoluta, e o aplicativo foi projetado para operar com foco total em segurança e processamento local.</p>
+        <p>Esta Política de Privacidade descreve de forma clara, transparente e acessível como o aplicativo <strong>Calcula Pix</strong> lida com as suas informações. A sua privacidade e a segurança dos seus dados financeiros são a nossa prioridade absoluta. O aplicativo foi projetado sob o princípio da <em>Privacidade por Design (Privacy by Design)</em>, operando com foco em processamento e armazenamento estritamente locais no seu próprio dispositivo.</p>
     </section>
 
     <div class="highlight-box">
-        <p><strong>Resumo Crítico de Privacidade:</strong> O Calcula Pix é um aplicativo que funciona de maneira essencialmente <strong>offline</strong> no que diz respeito aos seus dados financeiros e chaves Pix. Não coletamos, não transmitimos e não armazenamos nenhuma de suas informações pessoais em servidores externos.</p>
+        <p><strong>Resumo de Privacidade:</strong> O Calcula Pix é um utilitário que opera de forma <strong>offline</strong> para todas as funções financeiras e chaves Pix. Não coletamos, não vendemos e não armazenamos nenhuma chave bancária, CPF, telefone ou histórico de cálculos em servidores externos.</p>
     </div>
 
     <section>
         <h2>1. Processamento e Armazenamento Local de Dados</h2>
-        <p>O aplicativo Calcula Pix manipula informações que podem conter dados de identificação pessoal e sensíveis, tais como chaves Pix (incluindo CPF, CNPJ, números de telefone ou endereços de e-mail) e valores financeiros digitados para a geração de QR Codes. Esclarecemos que:</p>
+        <p>O aplicativo Calcula Pix manipula informações para a sua conveniência operacional na geração de cobranças:</p>
         <ul>
-            <li><strong>Operação Offline:</strong> O cadastro de chaves Pix, os cálculos matemáticos realizados na tela da calculadora, a geração de imagens de QR Codes e a criação de cadeias de caracteres da modalidade "Pix Copia e Cola" ocorrem de forma estritamente local no seu próprio dispositivo eletrônico.</li>
-[20/08/2026 14:01] Rafael Sales: <li><strong>Ausência de Sincronização em Nuvem:</strong> Não enviamos, não armazenamos em infraestruturas externas de nuvem e não compartilhamos as chaves cadastradas ou os dados de transações gerados por você.</li>
-            <li><strong>Histórico de QR Codes:</strong> O aplicativo mantém um registro histórico local apenas para a sua conveniência e facilidade de reuso no cotidiano. Esse histórico possui uma rotina de <strong>exclusão automática a cada 30 dias</strong> para otimizar o espaço em disco e mitigar riscos de segurança. Adicionalmente, você pode realizar a limpeza manual desse histórico ou remover chaves salvas a qualquer instante através das opções da interface.</li>
+            <li><strong>Chaves Pix Cadastradas:</strong> As chaves Pix inseridas (como CPF, CNPJ, e-mail, telefone ou chave aleatória) e o nome do titular/banco são armazenados localmente na memória protegida do seu dispositivo (utilizando preferências seguras e criptografia do sistema Android).</li>
+            <li><strong>Cálculos e QR Codes:</strong> Todos os cálculos matemáticos na calculadora e a geração dos códigos "Pix Copia e Cola" ou imagens de QR Code (padrão EMVCo / Banco Central do Brasil) são computados 100% offline no processador do seu celular.</li>
+            <li><strong>Ausência de Sincronização em Nuvem de Chaves:</strong> Suas chaves Pix nunca são transmitidas para bancos de dados de terceiros ou servidores próprios.</li>
+            <li><strong>Backups Manuais:</strong> Caso utilize a função de exportação/importação de chaves Pix, o arquivo de backup (formato JSON) é gerado exclusivamente sob o seu comando e armazenado na pasta de sua escolha no dispositivo.</li>
         </ul>
     </section>
 
     <section>
-        <h2>2. Segurança e Autenticação do Dispositivo</h2>
-        <p>O aplicativo oferece uma funcionalidade opcional de bloqueio de acesso integrada à segurança nativa do seu smartphone (como Biometria, Reconhecimento Facial ou Senha/Padrão do sistema). O Calcula Pix não coleta, não armazena e não tem acesso a nenhuma das suas senhas ou dados biométricos. Todo o processo de validação de identidade é realizado exclusivamente e de forma segura pelo próprio sistema operacional (Android).</p>
-    </section>
-
-    <section>
-        <h2>3. Processamento de Pagamentos e Compras no Aplicativo</h2>
-        <p>Para a aquisição da versão PRO (como o Acesso Vitalício), o Calcula Pix utiliza a infraestrutura de pagamentos oficial e segura do Google Play (Google Play Billing), com o auxílio de serviços de terceiros (como o RevenueCat) exclusivamente para a validação e liberação do status da compra.</p>
-        <p>Todo o processamento financeiro é realizado de forma criptografada pelo Google. O Calcula Pix e seu desenvolvedor não coletam, não processam, não armazenam e não têm acesso a nenhum dos seus dados financeiros sensíveis, tais como números de cartão de crédito, código de segurança ou senhas bancárias.</p>
-    </section>
-
-    <section>
-        <h2>4. Importação e Exportação de Dados (Backup em Arquivo .JSON)</h2>
-        <p>O Calcula Pix disponibiliza um recurso opcional de portabilidade que permite exportar ou importar sua listagem de chaves Pix armazenadas em formato de arquivo texto estruturado (.json). Com relação a este recurso:</p>
+        <h2>2. Compras no Aplicativo e Licença PRO (Google Play Billing)</h2>
+        <p>O Calcula Pix oferece recursos avançados opcionais (como a Janela Flutuante personalizável) por meio da versão <strong>Calcula Pix PRO</strong>:</p>
         <ul>
-            <li><strong>Uso do Gerenciador Nativo do Sistema:</strong> O aplicativo faz uso do framework nativo de acesso a armazenamento do sistema operacional Android. O aplicativo não possui permissão oculta para vasculhar ou ler diretórios aleatórios do seu dispositivo; o ato de salvar ou selecionar o arquivo .json ocorre inteiramente sob a interface do gerenciador nativo do seu celular, no local exato que você definir.</li>
-            <li><strong>Responsabilidade pela Guarda do Arquivo:</strong> Devido ao fato de o arquivo exportado conter suas chaves Pix (dados que podem ser sensíveis), a custódia, o transporte, o envio e a segurança deste arquivo gerado passam a ser de inteira e exclusiva responsabilidade do usuário após a sua criação. Recomendamos fortemente não compartilhar este arquivo com terceiros e guardá-lo em diretórios seguros.</li>
+            <li><strong>Processamento de Pagamento:</strong> As transações financeiras são intermediadas e processadas integralmente pelo sistema de pagamentos seguro do <strong>Google Play</strong>. O desenvolvedor não tem acesso aos seus dados de cartão de crédito, contas bancárias ou credenciais de pagamento.</li>
+            <li><strong>Validação Segura da Licença:</strong> Ao realizar uma compra, o aplicativo pode enviar o token criptográfico fornecido pelo Google para uma função de validação em nuvem (Firebase Cloud Functions) unicamente para verificar a autenticidade da licença junto à Google Play Developer API e desbloquear os recursos no seu aparelho. Nenhum dado pessoal é vinculado ou retido nessa consulta.</li>
         </ul>
     </section>
 
     <section>
-        <h2>5. Exibição de Anúncios e Serviços de Terceiros</h2>
-        <p>Para assegurar a gratuidade da versão básica do aplicativo, o Calcula Pix faz uso de redes de anúncios de empresas terceiras para a exibição de publicidade em formato de banners. Atualmente, integramos serviços de veiculação como o <strong>Google AdMob</strong>.</p>
-        <p>Essas redes parceiras de publicidade podem coletar e utilizar dados estritamente técnicos e identificadores anônimos originários do seu dispositivo móvel (como o ID de publicidade do Android - AAID, modelo do aparelho, operadora e o endereço IP) para fins de personalização de anúncios e medição de desempenho de campanhas de marketing.</p>
-[20/08/2026 14:01] Rafael Sales: <p><strong>Nota importante:</strong> Os dados técnicos coletados pelas redes de anúncios não possuem qualquer vínculo, acesso ou correlação com as chaves Pix cadastradas, senhas (PIN), valores financeiros calculados ou históricos de movimentações gerados localmente dentro do aplicativo.</p>
-        <p>Para compreender detalhadamente como o Google gerencia e protege as informações obtidas por meio de anúncios, sugerimos a consulta à <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Política de Privacidade do Google</a>.</p>
+        <h2>3. Janela Flutuante e Botão de Acesso Rápido (Quick Settings Tile)</h2>
+        <p>O aplicativo disponibiliza uma ferramenta de Janela Flutuante para cálculo ágil sobre outros aplicativos (como maquininhas e navegadores):</p>
+        <ul>
+            <li><strong>Botão nas Configurações Rápidas (Barra de Status):</strong> O app inclui um atalho no painel superior do Android (ao lado dos ícones de Wi-Fi e Lanterna) para ligar e desligar a calculadora flutuante com um toque.</li>
+            <li><strong>Privacidade na Sobreposição:</strong> A janela flutuante apenas desenha uma interface visual sobre a tela. O Calcula Pix <strong>NÃO</strong> grava a sua tela, não faz capturas de tela e não monitora o conteúdo de outros aplicativos abertos.</li>
+        </ul>
     </section>
 
     <section>
-        <h2>6. Conformidade com a Legislação (LGPD)</h2>
-        <p>Em total alinhamento com os preceitos estipulados pela Lei Geral de Proteção de Dados (Lei nº 13.709/2018 - LGPD), garantimos total controle e autodeterminação informativa ao usuário. Dado que a totalidade dos dados inseridos para a finalidade principal do aplicativo (chaves Pix, senhas e valores) permanece contida dentro do ambiente físico do seu próprio smartphone, você exerce posse plena e incondicional sobre esses dados, podendo revisá-los, alterá-los ou destruí-los por completo sem depender de requisições ou intermediários.</p>
+        <h2>4. Permissões Solicitadas pelo Aplicativo</h2>
+        <p>Para fornecer suas funcionalidades com segurança e estabilidade, o Calcula Pix solicita apenas as permissões estritamente necessárias do sistema Android:</p>
+        
+        <div class="perm-box">
+            <code>android.permission.SYSTEM_ALERT_WINDOW</code> (Desenhar sobre outros apps)<br>
+            <small>Utilizada exclusivamente para exibir a janela flutuante da calculadora quando acionada pelo usuário.</small>
+        </div>
+
+        <div class="perm-box">
+            <code>android.permission.FOREGROUND_SERVICE</code> e <code>SPECIAL_USE</code><br>
+            <small>Permite que o serviço da janela flutuante permaneça ativo em segundo plano enquanto você utiliza outros apps.</small>
+        </div>
+
+        <div class="perm-box">
+            <code>android.permission.BIND_QUICK_SETTINGS_TILE</code><br>
+            <small>Permite que você adicione o botão de ligar/desligar do Calcula Pix na barra de status superior do Android.</small>
+        </div>
+
+        <div class="perm-box">
+            <code>android.permission.POST_NOTIFICATIONS</code> (Android 13+)<br>
+            <small>Exibe uma notificação persistente simples informando que a janela flutuante está ativa, permitindo encerrá-la rapidamente.</small>
+        </div>
+
+        <div class="perm-box">
+            <code>android.permission.USE_BIOMETRIC</code> / Autenticação Local<br>
+            <small>Permite proteger o acesso às suas chaves com a digital/biometria nativa do aparelho. Os dados biométricos nunca saem do hardware de segurança do celular.</small>
+        </div>
+
+        <div class="perm-box">
+            <code>android.permission.INTERNET</code> e <code>ACCESS_NETWORK_STATE</code><br>
+            <small>Necessárias para validação da licença de compra no Google Play, exibição de anúncios (na versão gratuita) e envio de diagnósticos técnicos anônimos.</small>
+        </div>
     </section>
 
     <section>
-        <h2>7. Classificação Indicativa e Uso por Menores</h2>
-        <p>O aplicativo <strong>Calcula Pix</strong> é adequado para o público em geral e tem seu uso permitido para indivíduos <strong>maiores de 13 (treze) anos</strong>. Nós não coletamos intencionalmente informações pessoais de crianças menores de 13 anos.</p>
-        <p>Recomendamos que adolescentes com idade entre 13 e 18 anos utilizem o aplicativo com a ciência e supervisão de seus pais ou responsáveis legais, especialmente no que tange à interação com os anúncios exibidos por redes de publicidade terceirizadas.</p>
+        <h2>5. Serviços de Terceiros e Diagnóstico Técnico</h2>
+        <p>O aplicativo utiliza serviços de parceiros de tecnologia consolidados para garantir qualidade e manutenção:</p>
+        <ul>
+            <li><strong>Google AdMob:</strong> Na versão gratuita, exibe anúncios publicitários. O AdMob pode coletar identificadores anônimos de publicidade (AD_ID) e dados de dispositivo para veiculação de anúncios. Usuários da versão PRO possuem experiência totalmente livre de anúncios.</li>
+            <li><strong>Firebase Analytics e Firebase Crashlytics (Google LLC):</strong> Coletam métricas estatísticas anônimas de uso e relatórios técnicos em caso de travamentos ou falhas inesperadas do app (como modelo do aparelho, versão do Android e tipo de erro). Esses dados não identificam o usuário e são utilizados exclusivamente para corrigir problemas de estabilidade e aprimorar o desempenho.</li>
+        </ul>
     </section>
 
     <section>
-        <h2>8. Alterações nesta Política de Privacidade</h2>
-        <p>Esta política poderá passar por revisões e atualizações periódicas para se adequar a novas funcionalidades do ecossistema do aplicativo ou a modificações regulatórias. Sempre que houver alguma alteração relevante, a data de atualização presente no topo deste documento será revisada. Recomendamos a leitura ocasional desta página para se manter informado.</p>
+        <h2>6. Controle, Exclusão de Dados e LGPD</h2>
+        <p>Em conformidade com a <strong>Lei Geral de Proteção de Dados (LGPD - Lei nº 13.709/2018)</strong>:</p>
+        <ul>
+            <li>Você possui controle total sobre suas informações a qualquer momento.</li>
+            <li>Para excluir todas as chaves Pix e configurações cadastradas, basta apagar os dados do aplicativo nas Configurações do seu Android ou desinstalar o Calcula Pix. Como os dados são estritamente locais, eles são eliminados imediata e permanentemente do seu dispositivo.</li>
+        </ul>
     </section>
 
-   <section>
-       <h2>9. Contato</h2>
-        <p>Se você tiver dúvidas sobre esta política, entre em contato pelo e-mail: <a href="mailto:suportelinsrafa@gmail.com?subject=Suporte do Calcula PIX"><strong>suportelinsrafa@gmail.com</strong></a></p>       
-   </section>
+    <section>
+        <h2>7. Alterações nesta Política</h2>
+        <p>Podemos atualizar nossa Política de Privacidade periodicamente para refletir melhorias no aplicativo ou conformidade com novas normas legais. Recomendamos a revisão periódica desta página. Quaisquer alterações entram em vigor imediatamente após sua publicação.</p>
+    </section>
+
+    <section>
+        <h2>8. Contato e Suporte Oficial</h2>
+        <p>Se você tiver quaisquer dúvidas, sugestões ou solicitações relacionadas a esta Política de Privacidade ou ao funcionamento do aplicativo, entre em contato com o suporte através do e-mail:</p>
+        
+        <p>
+            <a class="btn-email" href="mailto:suportelinsrafa@gmail.com?subject=Suporte%20do%20Calcula%20PIX&body=---%20Informa%C3%A7%C3%B5es%20do%20Aplicativo%20---%0AAplicativo%3A%20Calcula%20PIX%0AVers%C3%A3o%3A%203.1%0ADispositivo%3A%20%5BInforme%20o%20modelo%20do%20seu%20aparelho%5D%0AVers%C3%A3o%20do%20Android%3A%20%5BInforme%20a%20vers%C3%A3o%20do%20Android%5D%0A---------------------------------%0A%0AOl%C3%A1%2C%20equipe%20de%20suporte!%0A%0A%5BDigite%20aqui%20a%20sua%20mensagem%20ou%20d%C3%BAvida%5D">
+                ✉️ suportelinsrafa@gmail.com
+            </a>
+        </p>
+        <p><small style="color: var(--text-muted);">Ao clicar no e-mail acima, o seu aplicativo de e-mail abrirá automaticamente com o assunto "Suporte do Calcula PIX" e os dados técnicos prontos para envio.</small></p>
+    </section>
 
     <footer>
         <p>&copy; 2026 Calcula Pix. Todos os direitos reservados.</p>
     </footer>
 </div>
-    
+
 </body>
 </html>
